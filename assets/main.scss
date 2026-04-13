@@ -30,6 +30,7 @@ $baseurl: "{{ site.url }}{{ site.baseurl }}";
 @import "base/variables";
 @import "base/reset";
 @import "base/typography";
+@import "base/syntax";
 
 // Components
 @import "components/card";
@@ -43,6 +44,7 @@ $baseurl: "{{ site.url }}{{ site.baseurl }}";
 
 // Layouts
 @import "layouts/grid";
+@import "layouts/sidebar";
 @import "layouts/home";
 @import "layouts/team";
 @import "layouts/research";

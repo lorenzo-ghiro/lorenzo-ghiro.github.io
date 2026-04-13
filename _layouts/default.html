@@ -5,13 +5,44 @@
 
   <body>
 
+    <!-- Mobile top bar: only visible on small screens -->
+    <div class="mobile-topbar">
+      <button class="sidebar-toggle" id="sidebarToggle" aria-label="Open navigation">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+      <a class="mobile-brand" href="{{ site.url }}{{ site.baseurl }}/">{{ site.name | escape }}</a>
+      <div style="margin-left:auto; display:flex; gap:0.5rem; align-items:center;">
+        <button class="search-toggle sidebar-icon-btn" id="searchToggleMobile" aria-label="Search site">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+        {% if site.dark_mode %}
+        <button class="dark-mode-toggle sidebar-icon-btn" id="darkModeToggleMobile" aria-label="Toggle dark mode">
+          <i class="fa-solid fa-sun" id="themeIconMobile"></i>
+        </button>
+        {% endif %}
+      </div>
+    </div>
+
+    <!-- Sidebar overlay (mobile click-to-close) -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <div class="site-wrapper">
+
+      <aside class="site-sidebar" id="siteSidebar">
+        {% include sidebar.html %}
+      </aside>
+
+      <div class="site-main">
+        <main class="site-container">
+          {{ content }}
+        </main>
+        {% include footer.html %}
+      </div>
+
+    </div>
+
+    <!-- Search overlay -->
     {% include header.html %}
-
-    <main class="site-container">
-      {{ content }}
-    </main>
-
-    {% include footer.html %}
 
   </body>
 

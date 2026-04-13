@@ -6,31 +6,66 @@
 (function () {
   'use strict';
 
+  // ----- Sidebar Toggle (mobile) -----
+
+  var sidebarToggleBtn = document.getElementById('sidebarToggle');
+  var sidebar = document.getElementById('siteSidebar');
+  var sidebarOverlay = document.getElementById('sidebarOverlay');
+
+  function openSidebar() {
+    if (!sidebar) return;
+    sidebar.classList.add('open');
+    sidebarOverlay.classList.add('visible');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeSidebar() {
+    if (!sidebar) return;
+    sidebar.classList.remove('open');
+    sidebarOverlay.classList.remove('visible');
+    document.body.style.overflow = '';
+  }
+
+  if (sidebarToggleBtn) {
+    sidebarToggleBtn.addEventListener('click', openSidebar);
+  }
+
+  if (sidebarOverlay) {
+    sidebarOverlay.addEventListener('click', closeSidebar);
+  }
+
   // ----- Dark Mode Toggle -----
 
   var toggle = document.getElementById('darkModeToggle');
   var icon = document.getElementById('themeIcon');
+  var toggleMobile = document.getElementById('darkModeToggleMobile');
+  var iconMobile = document.getElementById('themeIconMobile');
 
   function updateIcon() {
-    if (!icon) return;
     var theme = document.documentElement.getAttribute('data-bs-theme');
-    if (theme === 'dark') {
-      icon.className = 'fa-solid fa-moon';
-    } else {
-      icon.className = 'fa-solid fa-sun';
-    }
+    var cls = theme === 'dark' ? 'fa-solid fa-moon' : 'fa-solid fa-sun';
+    if (icon) icon.className = cls;
+    if (iconMobile) iconMobile.className = cls;
+  }
+
+  function applyThemeToggle() {
+    var current = document.documentElement.getAttribute('data-bs-theme');
+    var next = current === 'dark' ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-bs-theme', next);
+    localStorage.setItem('theme', next);
+    updateIcon();
+  }
+
+  if (toggle || toggleMobile) {
+    updateIcon();
   }
 
   if (toggle) {
-    updateIcon();
+    toggle.addEventListener('click', applyThemeToggle);
+  }
 
-    toggle.addEventListener('click', function () {
-      var current = document.documentElement.getAttribute('data-bs-theme');
-      var next = current === 'dark' ? 'light' : 'dark';
-      document.documentElement.setAttribute('data-bs-theme', next);
-      localStorage.setItem('theme', next);
-      updateIcon();
-    });
+  if (toggleMobile) {
+    toggleMobile.addEventListener('click', applyThemeToggle);
   }
 
   // ----- Publication Expand/Collapse -----
@@ -133,18 +168,13 @@
     }
   }, { passive: true });
 
-  // ----- Navbar Scroll Shadow -----
+  // ----- Close sidebar when nav link is clicked (mobile) -----
 
-  var navbar = document.querySelector('.navbar');
-  if (navbar) {
-    window.addEventListener('scroll', function () {
-      if (window.scrollY > 10) {
-        navbar.classList.add('scrolled');
-      } else {
-        navbar.classList.remove('scrolled');
-      }
-    }, { passive: true });
-  }
+  document.querySelectorAll('.sidebar-nav-link').forEach(function (link) {
+    link.addEventListener('click', function () {
+      closeSidebar();
+    });
+  });
 
   // ----- Fade-in on Scroll -----
 
@@ -174,6 +204,7 @@
   // ----- Site Search -----
 
   var searchToggleBtn = document.getElementById('searchToggle');
+  var searchToggleMobileBtn = document.getElementById('searchToggleMobile');
   var searchOverlay = document.getElementById('searchOverlay');
   var searchInputEl = document.getElementById('searchInput');
   var searchResultsEl = document.getElementById('searchResults');
@@ -194,6 +225,10 @@
 
   if (searchToggleBtn) {
     searchToggleBtn.addEventListener('click', openSearch);
+  }
+
+  if (searchToggleMobileBtn) {
+    searchToggleMobileBtn.addEventListener('click', openSearch);
   }
 
   if (searchOverlay) {
