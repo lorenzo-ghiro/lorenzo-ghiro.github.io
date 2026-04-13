@@ -34,7 +34,7 @@
   <!-- Accent color from config -->
   {% if site.accent_color %}
   <style>
-    :root { --accent: {{ site.accent_color }}; --accent-hover: {{ site.accent_color }}; }
+    :root { --accent: {{ site.accent_color }}; --accent-hover: {{ site.accent_color }}; {% if site.content_width %}--content-max: {{ site.content_width }};{% endif %} {% if site.content_padding %}--content-padding: {{ site.content_padding }};{% endif %} }
   </style>
   {% endif %}
 
