@@ -9,6 +9,7 @@
 }
 
 .site-container {
+  flex: 1;              /* expand to fill .site-main, pushing footer to bottom */
   max-width: var(--content-max);
   margin: 0;
   padding: var(--space-8) var(--content-padding) 0;
