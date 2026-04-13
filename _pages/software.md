@@ -24,4 +24,23 @@ permalink: /software/
 </div>
 <p><strong>Authors:</strong> <em>R. P. Feynman</em></p>
 <p>A tool for systematically enumerating and evaluating Feynman diagrams in quantum electrodynamics calculations, automating the computation of scattering amplitudes to arbitrary order in perturbation theory.</p>
+
+```python
+import qed_calc as qed
+
+# Build the electron-electron scattering amplitude at one loop
+process = qed.Process(
+    incoming=["electron", "electron"],
+    outgoing=["electron", "electron"],
+)
+
+# Enumerate all Feynman diagrams up to order alpha^2
+diagrams = process.diagrams(order=2)
+print(f"Found {len(diagrams)} diagrams at O(alpha^2)")
+
+# Evaluate the total amplitude
+amplitude = sum(d.evaluate() for d in diagrams)
+print(f"M = {amplitude:.6f}")
+```
+
 </div>
