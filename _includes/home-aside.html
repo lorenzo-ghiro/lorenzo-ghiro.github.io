@@ -1,3 +1,4 @@
+{% if site.show_news != false %}
 <div class="section-card" style="margin-top: var(--space-6);">
 <h4 style="margin-top: 0;">News</h4>
 <div class="news-timeline">
@@ -10,3 +11,4 @@
 </div>
 <p style="margin-top: var(--space-4);"><a href="{{ site.url }}{{ site.baseurl }}/allnews.html">See all news &rarr;</a></p>
 </div>
+{% endif %}

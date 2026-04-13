@@ -35,6 +35,7 @@ analytics:
 # ============================================================
 # STEP 4: Choose Your Pages (comment out any you don't need)
 # ============================================================
+show_news: false          # show news block on home page sidebar
 nav_pages:
   - name: about
   - name: publications
