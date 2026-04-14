@@ -1,0 +1,36 @@
+# Research interests — rendered on both home.md and resume.md
+# via _includes/research-interests.html
+
+intro: >
+  My research spans two main areas. The first is
+  <strong>cooperative vehicular networking</strong>: I study platoon formation and coordination
+  algorithms, heterogeneous CACC coexistence, and real-time detection of misbehaving nodes in
+  safety-critical V2X scenarios, combining simulation-based evaluation
+  (<a href="https://omnetpp.org" target="_blank" rel="noopener">OMNeT++</a>,
+  <a href="https://eclipse.dev/sumo" target="_blank" rel="noopener">SUMO</a>,
+  <a href="https://veins.car2x.org" target="_blank" rel="noopener">Veins</a>,
+  <a href="https://plexe.car2x.org" target="_blank" rel="noopener">Plexe</a>)
+  with hybrid model/AI approaches.
+  The second is <strong>wireless privacy</strong>: I design and experimentally validate
+  PHY-layer mechanisms that prevent unauthorized CSI-based localization and sensing,
+  including open-source implementations on programmable radio platforms
+  (<a href="https://github.com/open-sdr/openwifi" target="_blank" rel="noopener">openwifi/FPGA</a>).
+
+directions:
+  - distributed platoon formation and coordination via V2X communication
+  - hybrid model-based and data-driven misbehavior detection for safety-critical platooning
+  - stochastic and AI-assisted modeling of wireless sensing
+  - digital twin frameworks for networked Intelligent Transport Systems
+
+phd_note: >
+  Earlier work during my PhD covered distributed algorithms for network centrality and routing,
+  and blockchain integration in IoT and community-network contexts.
+
+keywords:
+  - V2X
+  - Cooperative Driving
+  - CACC
+  - Misbehavior Detection
+  - Wireless Privacy
+  - CSI Sensing
+  - Distributed Algorithms

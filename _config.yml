@@ -5,7 +5,7 @@ name: "Lorenzo Ghiro"
 title: "Assistant Professor, PhD in Information and Communication Technology"
 institution: "University of Brescia, Italy"
 email: lorenzo.ghiro@unibs.it
-photo: LG.jpg  # place your photo in images/
+photo: ghiro.png  # place your photo in images/
 
 # ============================================================
 # STEP 2: Your Links (optional -- delete any you don't use)
@@ -24,8 +24,8 @@ links:
 # ============================================================
 accent_color: "#2a6fad"      # theme color for links and buttons
 dark_mode: true              # show dark mode toggle in navbar
-content_width: "none"      # max width of main content area (e.g. 1200px, 1600px, none)
-content_padding: "4rem"    # left/right padding inside the main content area (2rem, 4rem, 6rem, etc.)
+content_width: "1400px"      # max width of main content area (e.g. 1200px, 1600px, none)
+content_padding: "2rem"    # left/right padding inside the main content area (2rem, 4rem, 6rem, etc.)
 bg_primary: "#FAFCFF"        # main page background color
 bg_secondary: "#e6edf7"      # sidebar / cards background color
 description: "Academic webpage of Dr. Lorenzo Ghiro"
@@ -41,14 +41,14 @@ analytics:
 # ============================================================
 show_news: false          # show news block on home page sidebar
 nav_pages:
-  - name: about
+  - name: resume
   - name: publications
-  - name: talks
-  - name: research
-  - name: software
-  - name: team
-  - name: teaching
-  - name: blogs
+  # - name: talks
+  # - name: research
+  # - name: software
+  # - name: team
+  # - name: teaching
+  # - name: blogs
 
 # ============================================================
 # Advanced Settings (you probably don't need to change these)
@@ -82,15 +82,15 @@ kramdown:
   enable_coderay: false
   parse_block_html: true
 
-plugins: ["jekyll/scholar", "jekyll-sitemap"]
+plugins: ["jekyll/scholar", "jekyll-sitemap", "jekyll-target-blank"]
 
 scholar:
-  last_name: Doe
-  first_name: [John]
+  last_name: Ghiro
+  first_name: [Lorenzo]
   style: citesty
   locale: en
   source: /assets/
-  bibliography: ref.bib
+  bibliography: references.bib
   bibliography_template: bibtemplate
   sort_by: year, month
   order: descending

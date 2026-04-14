@@ -1,0 +1,9 @@
+{% assign ri = site.data.research_interests %}
+<p>{{ ri.intro }}</p>
+<p><em>Recent research directions</em> include:</p>
+<ul>
+{% for d in ri.directions %}<li>{{ d }};</li>
+{% endfor %}
+</ul>
+<p>{{ ri.phd_note }}</p>
+<p><strong>Keywords:</strong> {{ ri.keywords | join: ", " }}</p>

@@ -1,5 +1,16 @@
-# Grants and funding, shown on the About page.
-# Each entry needs: name
-- name: NSF Grant for Quantum Electrodynamics Research
-- name: ONR Contract for Parallel Computing Research
-- name: DOE Grant for Parton Model Development
+# Competitive grant applications — shown on the Resume page.
+# Fields: name, shortname (optional), role, budget, url (optional), notes (optional)
+- name: "Prototype Development and Evaluation of a Tracked Haptic System for Assistive Virtual Environments"
+  role: "Principal Investigator"
+  budget: "€4,000 (won)"
+
+- name: "FIS3 — Performance and Impact of Next Generation V2X on Smart Mobility and 6G Verticals"
+  shortname: "PING-6G"
+  role: "Principal Investigator"
+  budget: "€1.2M over 5 years (requested)"
+  notes: "Evaluation: 9/10 (scientific project), 8/10 (CV)"
+
+- name: "Amazon Science – Think Big: Stochastic Modeling and Privacy-Controlled Joint Communication and Sensing"
+  shortname: "CSI-Foundations"
+  role: "Principal Investigator"
+  budget: "$100k + $70k AWS credits (requested)"

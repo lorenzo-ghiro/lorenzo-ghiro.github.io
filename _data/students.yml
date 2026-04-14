@@ -1,50 +1,58 @@
 # Thesis students supervised — shown on the Resume page.
-# Fields: name, university, degree, year, title
+# Fields: name, university, degree, year, title, file (optional)
+# If 'file' is set, the thesis title becomes a link to /thesis/<file>
 - name: Riccardo Modina
   university: University of Brescia
   degree: MSc
   year: "2025/26"
   title: "Estensione di un Classificatore di Anomalie Veicolari per riconoscere Malfunzionamenti del Radar e proteggere platoon"
+  file:
 
 - name: Alex Marchi
   university: University of Brescia
   degree: MSc
   year: "2025/26"
   title: "Valutazione simulativa di un protocollo 5G-V2X per lo smantellamento sicuro di platoon"
+  file:
 
 - name: Marco Franceschini
   university: University of Brescia
   degree: MSc
   year: "2023/24"
   title: "A neural-network based anomaly detection system and a safety protocol to protect vehicular networks"
+  file:
 
 - name: Mattia Reboldi
   university: University of Brescia
   degree: MSc
   year: "2023/24"
   title: "Introduzione di un modello radar in SUMO"
+  file:
 
 - name: Cristina Pezzoni
   university: University of Brescia
   degree: MSc
   year: "2023/24"
   title: "Analisi semantica di messaggi CAM e valutazione dell'impatto sulla sicurezza della guida cooperativa"
+  file:
 
 - name: Marco Franceschini
   university: University of Brescia
   degree: BSc
   year: "2021/22"
   title: "Simulazione di guida cooperativa con controllori longitudinali eterogenei"
+  file:
 
 - name: Elena Tonini
   university: University of Brescia
   degree: BSc
   year: "2021/22"
   title: "Analysis and Characterization of Wi-Fi Channel State Information"
+  file:
 
 - name: Mattia Milani
   university: University of Trento
   degree: BSc
   year: "2018/19"
   title: "BGP and Load Centrality"
-  year: 1956
+  file:

@@ -8,32 +8,37 @@ permalink: /
 <h2 class="home-hero">{{ site.name }}</h2>
 <p class="home-hero-sub">{{ site.title }}, {{ site.institution }}</p>
 
-<div class="chip-container" markdown="0">
-<a href="{{ site.url }}{{ site.baseurl }}/research" class="chip">Quantum Electrodynamics</a>
-<a href="{{ site.url }}{{ site.baseurl }}/research" class="chip">Path Integrals</a>
-<a href="{{ site.url }}{{ site.baseurl }}/research" class="chip">Superfluidity</a>
-<a href="{{ site.url }}{{ site.baseurl }}/research" class="chip">Parton Model</a>
-<a href="{{ site.url }}{{ site.baseurl }}/research" class="chip">Quantum Computing</a>
-<a href="{{ site.url }}{{ site.baseurl }}/research" class="chip">Nanotechnology</a>
+<!-- <div class="chip-container" markdown="0">
+<a href="{{ site.url }}{{ site.baseurl }}/research" class="chip">Vehicular Networks</a>
+<a href="{{ site.url }}{{ site.baseurl }}/research" class="chip">V2X Communications</a>
+<a href="{{ site.url }}{{ site.baseurl }}/research" class="chip">Distributed Systems</a>
+<a href="{{ site.url }}{{ site.baseurl }}/research" class="chip">Cooperative Driving</a>
+<a href="{{ site.url }}{{ site.baseurl }}/research" class="chip">AI-driven Networking</a>
+<a href="{{ site.url }}{{ site.baseurl }}/research" class="chip">Digital Twins</a>
+</div> -->
+
+{% include research-interests.html %}
+
+
+<div class="callout callout-info" markdown="0">
+<div class="callout-title"><i class="fa-solid fa-file-lines callout-icon"></i> Latest Publication — Elsevier Computer Communications, 2026</div>
+<p><strong>Physics Joins AI: A Real-Time Hybrid Misbehavior Detection Framework for Vehicular Networks</strong><br>
+L. Ghiro, C. Pezzoni, M. Franceschini, R. Lo Cigno.<br>
+<em>Computer Communications</em>, vol. 252, p. 108519, 2026. &nbsp;<a href="https://doi.org/10.1016/j.comcom.2026.108519" target="_blank" rel="noopener">DOI →</a></p>
 </div>
 
-Theoretical physics is a branch of physics that focuses on the development of mathematical models and theories to understand and explain natural phenomena.
-It plays a crucial role in our understanding of the fundamental laws of the universe and the fundamental particles that make up all matter.
-Research in theoretical physics helps us to make predictions about how the universe works and to test these predictions through experiments.
-
-<div class="callout callout-success" markdown="0">
-<div class="callout-title"><i class="fa-solid fa-award callout-icon"></i> Nobel Prize in Physics, 1965</div>
-<p>Awarded the Nobel Prize jointly with Julian Schwinger and Shin'ichiro Tomonaga for fundamental work in quantum electrodynamics, with deep-ploughing consequences for the physics of elementary particles.</p>
-</div>
-
-<div class="banner-frame" markdown="0">
-<img src="{{ site.url }}{{ site.baseurl }}/images/banner.jpg" alt="Feynman diagrams" loading="lazy">
-<div class="banner-caption">Examples of Feynman diagrams. Feynman R., <em>The theory of positrons. Phys. Rev.</em> (1949)</div>
+<div class="banner-frame" markdown="0" style="max-width: 800px;">
+<img src="{{ site.url }}{{ site.baseurl }}/images/plexe-mds.gif" alt="Vehicular platoon formation" loading="lazy">
+<div class="banner-caption">Vehicular platoon simulation with heterogeneous CACC controllers. OMNeT++/Plexe.</div>
 </div>
 
 ### About me
 
-I am a physicist working in the field of quantum mechanics and quantum electrodynamics.
-I received my undergraduate degree in physics from the Massachusetts Institute of Technology (MIT) in 1939 and went on to earn my PhD from Princeton University in 1942.
-After completing my doctoral studies, I worked on the Manhattan Project, where I helped develop the first atomic bombs.
-After the war, I returned to academia, holding teaching and research positions at Cornell and now at the California Institute of Technology.
+I am an Assistant Professor (RTD-a) at the [Department of Information Engineering](https://www.unibs.it/it/ateneo/organizzazione/dipartimenti/ingegneria-dellinformazione-dii), [University of Brescia](https://www.unibs.it/it), where I am part of the [ANS Lab](https://ans.unibs.it) led by Prof. Francesco Gringoli and Prof. Renato Lo Cigno.
+
+I received my BSc (2014), MSc (2017, *cum laude*), and PhD (2021) in Computer Science from the University of Trento, advised by Prof. Renato Lo Cigno and Prof. Leonardo Maccari.
+My PhD thesis focused on *Centrality Routing and Blockchain Technologies in Distributed Networks*.
+From 2021 to 2023 I was a Postdoctoral Researcher between the University of Trento and the University of Brescia.
+In 2019–2020 I was a Visiting Scholar at [Northeastern University](https://www.northeastern.edu), Boston (USA), hosted by Prof. Stefano Basagni within the Institute for the Wireless Internet of Things.
+
+<!-- My scientific objective is to advance algorithmically grounded networking research while contributing to the educational and professional evolution of Computer Science, promoting competitive projects and supporting technology transfer. -->

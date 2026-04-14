@@ -37,3 +37,48 @@
     }
   }
 }
+
+// CV timeline entry: period label left, body right
+.cv-entry {
+  display: flex;
+  gap: var(--space-5);
+  margin-bottom: var(--space-5);
+  padding-bottom: var(--space-5);
+  border-bottom: 1px solid var(--border-color);
+
+  &:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+  }
+}
+
+.cv-period {
+  flex: 0 0 9rem;
+  font-size: 0.8125rem;
+  color: var(--text-muted);
+  font-variant-numeric: tabular-nums;
+  padding-top: 0.15rem;
+  line-height: 1.5;
+}
+
+.cv-body {
+  flex: 1 1 auto;
+  min-width: 0;
+  line-height: 1.6;
+
+  > *:last-child {
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 560px) {
+  .cv-entry {
+    flex-direction: column;
+    gap: var(--space-1);
+  }
+
+  .cv-period {
+    flex: none;
+  }
+}

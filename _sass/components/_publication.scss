@@ -2,6 +2,13 @@
 // Publication entry
 // =============================================================
 
+// jekyll-scholar wraps entries in an <ol>; hide the counter numbers
+.bibliography {
+  list-style: none;
+  padding-left: 0;
+  margin-left: 0;
+}
+
 .pub-entry {
   padding: var(--space-6) 0;
   border-bottom: 1px solid var(--border-color);
