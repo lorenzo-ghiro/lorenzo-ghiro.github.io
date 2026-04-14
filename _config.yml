@@ -1,32 +1,34 @@
 # ============================================================
 # STEP 1: Your Identity (required)
 # ============================================================
-name: "Richard Feynman"
-title: "Professor of Physics"
-institution: "California Institute of Technology"
-email: richard@university.edu
-photo: headshot.jpg  # place your photo in images/
+name: "Lorenzo Ghiro"
+title: "Assistant Professor, PhD in Information and Communication Technology"
+institution: "University of Brescia, Italy"
+email: lorenzo.ghiro@unibs.it
+photo: LG.jpg  # place your photo in images/
 
 # ============================================================
 # STEP 2: Your Links (optional -- delete any you don't use)
 # ============================================================
 links:
-  google_scholar: "https://scholar.google.com/citations?user=B7vSqZsAAAAJ"
-  github: "https://github.com/"
-  researchgate: "https://www.researchgate.net/"
-  orcid: ""
+  google_scholar: "https://scholar.google.it/citations?user=buh0S5UAAAAJ&hl=en"
+  github: "https://github.com/lorenzo-ghiro"
+  # researchgate: "https://www.researchgate.net/"
+  orcid: "https://orcid.org/0000-0002-3372-422X"
   twitter: ""
-  linkedin: ""
+  linkedin: "https://www.linkedin.com/in/lorenzo-ghiro-250297241"
   cv: ""  # e.g., "papers/cv.pdf" — leave blank to hide the CV icon
 
 # ============================================================
 # STEP 3: Site Settings
 # ============================================================
-accent_color: "#1a7a6d"      # theme color for links and buttons
+accent_color: "#2a6fad"      # theme color for links and buttons
 dark_mode: true              # show dark mode toggle in navbar
 content_width: "none"      # max width of main content area (e.g. 1200px, 1600px, none)
 content_padding: "4rem"    # left/right padding inside the main content area (2rem, 4rem, 6rem, etc.)
-description: "Academic webpage of Dr. Richard Feynman"
+bg_primary: "#FAFCFF"        # main page background color
+bg_secondary: "#e6edf7"      # sidebar / cards background color
+description: "Academic webpage of Dr. Lorenzo Ghiro"
 baseurl: ""
 url: ""
 

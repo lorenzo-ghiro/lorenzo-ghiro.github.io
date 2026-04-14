@@ -199,7 +199,7 @@ $sidebar-width: 280px;
   align-items: center;
   gap: var(--space-3);
   padding: var(--space-3) var(--space-4);
-  background-color: rgba(248, 246, 241, 0.92);
+  background-color: var(--bg-glass);
   backdrop-filter: saturate(180%) blur(16px);
   -webkit-backdrop-filter: saturate(180%) blur(16px);
   border-bottom: 1px solid var(--border-color);
@@ -209,7 +209,7 @@ $sidebar-width: 280px;
 }
 
 [data-bs-theme="dark"] .mobile-topbar {
-  background-color: rgba(28, 27, 24, 0.92);
+  background-color: var(--bg-glass);
 }
 
 .mobile-brand {

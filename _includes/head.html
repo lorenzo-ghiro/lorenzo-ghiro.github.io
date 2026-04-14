@@ -31,12 +31,16 @@
   <link rel="alternate icon" href="{{ site.url }}{{ site.baseurl }}/favicon.ico">
   <link rel="alternate" type="application/rss+xml" title="{{ site.name | escape }}" href="{{ site.url }}{{ site.baseurl }}/feed.xml">
 
-  <!-- Accent color from config -->
-  {% if site.accent_color %}
+  <!-- Theme overrides from config -->
   <style>
-    :root { --accent: {{ site.accent_color }}; --accent-hover: {{ site.accent_color }}; {% if site.content_width %}--content-max: {{ site.content_width }};{% endif %} {% if site.content_padding %}--content-padding: {{ site.content_padding }};{% endif %} }
+    :root {
+      {% if site.accent_color %}--accent: {{ site.accent_color }}; --accent-hover: {{ site.accent_color }};{% endif %}
+      {% if site.content_width %}--content-max: {{ site.content_width }};{% endif %}
+      {% if site.content_padding %}--content-padding: {{ site.content_padding }};{% endif %}
+      {% if site.bg_primary %}--bg-primary: {{ site.bg_primary }}; --bg-glass: {{ site.bg_primary }};{% endif %}
+      {% if site.bg_secondary %}--bg-secondary: {{ site.bg_secondary }};{% endif %}
+    }
   </style>
-  {% endif %}
 
   <!-- Dark mode: apply saved theme before paint to prevent flash -->
   <script>
