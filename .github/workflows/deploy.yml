@@ -28,12 +28,7 @@ jobs:
           bundler-cache: true
 
       - name: Build site
-        run: |
-          if [ -f _config_demo.yml ]; then
-            bundle exec jekyll build --config _config.yml,_config_demo.yml
-          else
-            bundle exec jekyll build
-          fi
+        run: bundle exec jekyll build
         env:
           JEKYLL_ENV: production
 
