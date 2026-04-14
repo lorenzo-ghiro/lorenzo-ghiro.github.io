@@ -9,7 +9,10 @@
   <!-- Profile block -->
   <div class="sidebar-profile">
     <a href="{{ site.baseurl }}/about" class="sidebar-photo-link">
-      <img src="{{ site.baseurl }}/images/{{ site.photo }}" class="sidebar-photo" alt="{{ site.name }}" loading="lazy">
+      <picture>
+        <source srcset="{{ site.baseurl }}/images/ghiro.webp" type="image/webp">
+        <img src="{{ site.baseurl }}/images/{{ site.photo }}" class="sidebar-photo" alt="{{ site.name }}" loading="lazy" width="110" height="110">
+      </picture>
     </a>
     <p class="sidebar-name">{{ site.name }}</p>
     <p class="sidebar-title">{{ site.title }}</p>

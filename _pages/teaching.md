@@ -49,7 +49,7 @@ permalink: /teaching/
 <div class="cv-entry">
   <div class="cv-period">2021/22</div>
   <div class="cv-body">
-    <strong>Distributed Systems 2</strong><br>
+    <strong><a href="https://lorenzoghiro.com/labsdistributedsystems2/" target="_blank" rel="noopener">Distributed Systems 2</a></strong><br>
     MSc in Computer Science · 24h/semester · Language: English<br>
     <br>
     Advanced module on distributed computing: epidemic and broadcast protocols, gossip-based failure detection, distributed hash tables (DHT), and an introduction to blockchain architectures and consensus mechanisms.
