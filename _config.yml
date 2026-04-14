@@ -30,7 +30,7 @@ bg_primary: "#FAFCFF"        # main page background color
 bg_secondary: "#e6edf7"      # sidebar / cards background color
 description: "Academic webpage of Dr. Lorenzo Ghiro"
 baseurl: ""
-url: ""
+url: "https://lorenzoghiro.com"
 
 # Google Analytics — paste your GA4 measurement ID, or leave blank
 analytics:
