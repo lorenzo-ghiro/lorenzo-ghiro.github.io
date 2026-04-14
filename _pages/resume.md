@@ -215,7 +215,8 @@ permalink: /resume/
 {% if site.data.students %}
 <div class="section-card" markdown="0">
 <h3>Student Supervision</h3>
-<table style="width:100%; border-collapse: collapse;">
+<div style="overflow-x: auto; -webkit-overflow-scrolling: touch;">
+<table style="width:100%; border-collapse: collapse; min-width: 500px;">
 <thead>
 <tr style="border-bottom: 2px solid var(--border-color);">
   <th style="text-align:left; padding: var(--space-2) var(--space-3); font-size:0.8125rem; color:var(--text-muted); font-weight:600; text-transform:uppercase; letter-spacing:0.06em;">Student</th>
@@ -241,6 +242,7 @@ permalink: /resume/
 {% endfor %}
 </tbody>
 </table>
+</div>
 </div>
 {% endif %}
 
@@ -272,7 +274,8 @@ permalink: /resume/
      ====================================================== -->
 <div class="section-card" markdown="0">
 <h3>Language Skills</h3>
-<table style="width:60%; border-collapse:collapse; font-size:0.875rem;">
+<div style="overflow-x: auto; -webkit-overflow-scrolling: touch;">
+<table style="width:60%; border-collapse:collapse; font-size:0.875rem; min-width: 380px;">
 <thead>
 <tr style="border-bottom: 2px solid var(--border-color);">
   <th style="text-align:left; padding: var(--space-2) var(--space-3); color:var(--text-muted); font-weight:600; text-transform:uppercase; letter-spacing:0.06em;">Language</th>
@@ -303,6 +306,7 @@ permalink: /resume/
 </tr>
 </tbody>
 </table>
+</div>
 <p style="font-size:0.8125rem; color:var(--text-muted); margin-top:var(--space-3);">English: Certificate in Advanced English (CAE – Level C1), University of Cambridge ESOL Examinations, 2015.</p>
 </div>
 
