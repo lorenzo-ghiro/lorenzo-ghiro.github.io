@@ -23,7 +23,7 @@ links:
 # STEP 3: Site Settings
 # ============================================================
 accent_color: "#2a6fad"      # theme color for links and buttons
-dark_mode: true              # show dark mode toggle in navbar
+dark_mode: false             # show dark mode toggle in navbar
 content_width: "1400px"      # max width of main content area (e.g. 1200px, 1600px, none)
 content_padding: "2rem"    # left/right padding inside the main content area (2rem, 4rem, 6rem, etc.)
 bg_primary: "#FAFCFF"        # main page background color

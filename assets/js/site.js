@@ -34,40 +34,6 @@
     sidebarOverlay.addEventListener('click', closeSidebar);
   }
 
-  // ----- Dark Mode Toggle -----
-
-  var toggle = document.getElementById('darkModeToggle');
-  var icon = document.getElementById('themeIcon');
-  var toggleMobile = document.getElementById('darkModeToggleMobile');
-  var iconMobile = document.getElementById('themeIconMobile');
-
-  function updateIcon() {
-    var theme = document.documentElement.getAttribute('data-bs-theme');
-    var cls = theme === 'dark' ? 'fa-solid fa-moon' : 'fa-solid fa-sun';
-    if (icon) icon.className = cls;
-    if (iconMobile) iconMobile.className = cls;
-  }
-
-  function applyThemeToggle() {
-    var current = document.documentElement.getAttribute('data-bs-theme');
-    var next = current === 'dark' ? 'light' : 'dark';
-    document.documentElement.setAttribute('data-bs-theme', next);
-    localStorage.setItem('theme', next);
-    updateIcon();
-  }
-
-  if (toggle || toggleMobile) {
-    updateIcon();
-  }
-
-  if (toggle) {
-    toggle.addEventListener('click', applyThemeToggle);
-  }
-
-  if (toggleMobile) {
-    toggleMobile.addEventListener('click', applyThemeToggle);
-  }
-
   // ----- Publication Expand/Collapse -----
 
   document.addEventListener('click', function (e) {
