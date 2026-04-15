@@ -60,14 +60,32 @@ code, pre {
   font-size: 0.875em;
 }
 
+// Inline code: GitHub-like chip style
+code {
+  padding: 0.12em 0.35em;
+  border-radius: 6px;
+  background-color: #ffffff;
+  border: 1px solid #d8dee4;
+  color: #24292f;
+}
+
 pre {
-  background-color: var(--bg-secondary);
-  border: 1px solid var(--border-color);
+  background-color: #ffffff;
+  border: 1px solid #d8dee4;
   border-radius: var(--radius-md);
   padding: var(--space-4);
   overflow-x: auto;
-  white-space: pre-wrap;
-  word-wrap: break-word;
+  white-space: pre;
+  word-wrap: normal;
+}
+
+// Block code should not use the inline code chip style.
+pre code {
+  background: transparent;
+  border: 0;
+  padding: 0;
+  border-radius: 0;
+  color: inherit;
 }
 
 ul, ol {

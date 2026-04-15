@@ -46,13 +46,21 @@ nav_pages:
   # - name: talks
   # - name: research
   # - name: software
+    # collection: software       # uncomment when _software/ folder exists
   # - name: team
   - name: teaching
+  - name: tutorials
+    collection: tutorials        # auto-populates accordion from _tutorials/
   # - name: blogs
 
 # ============================================================
 # Advanced Settings (you probably don't need to change these)
 # ============================================================
+collections:
+  tutorials:
+    output: true
+    permalink: /tutorials/:name/
+
 include:
   - .htaccess
   - _pages
@@ -114,3 +122,4 @@ exclude:
   - package.json
   - package-lock.json
   - docs
+  - just-the-docs-main

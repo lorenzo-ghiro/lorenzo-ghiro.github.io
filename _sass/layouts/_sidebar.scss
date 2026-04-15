@@ -151,6 +151,122 @@ $sidebar-width: 280px;
   }
 }
 
+// ---- Accordion nav item (e.g. tutorials) ----
+// ---- Expandable nav items (JTD pattern) ----
+// The <li.nav-list-item> toggles .active to show/hide children.
+// The <button.nav-list-expander> is positioned absolutely on the right.
+// This is the same model used by Just the Docs.
+
+.nav-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: none; // hidden by default; shown when parent li.active
+
+  .nav-list-item {
+    margin: 0;
+  }
+}
+
+.nav-list-item {
+  position: relative;
+  margin: 0;
+  list-style: none;
+
+  // Show children when active
+  &.active > .nav-list {
+    display: block;
+  }
+
+  // Rotate expander arrow when active
+  &.active > .nav-list-expander svg {
+    transform: rotate(90deg);
+  }
+}
+
+.nav-list-expander {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--text-muted);
+  border-radius: var(--radius-sm);
+  transition: color var(--transition-fast), background-color var(--transition-fast);
+  padding: 0;
+  z-index: 3;
+
+  svg {
+    stroke: currentColor;
+    fill: none;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    transition: transform var(--transition-fast);
+  }
+
+  &:hover {
+    color: var(--accent);
+    background-color: var(--accent-light);
+  }
+}
+
+// Parent-level link inside an expandable item
+.nav-list-item > .nav-list-link {
+  display: block;
+  position: relative;
+  z-index: 1;
+  padding: var(--space-2) var(--space-3);
+  padding-right: 2.25rem; // make room for the expander button
+  border-radius: var(--radius-sm);
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text-secondary) !important;
+  background-image: none !important;
+  transition: color var(--transition-fast), background-color var(--transition-fast);
+
+  &:hover {
+    color: var(--accent) !important;
+    background-color: var(--accent-light);
+  }
+
+  &.active {
+    color: var(--accent) !important;
+    background-color: var(--accent-light);
+    font-weight: 600;
+  }
+}
+
+// Child links (one level deeper)
+.nav-list .nav-list-item > .nav-list-link {
+  padding-left: calc(var(--space-3) + var(--space-4));
+  padding-right: var(--space-3);
+  font-size: 0.8125rem;
+  font-weight: 400;
+  color: var(--text-muted) !important;
+  border-left: 2px solid var(--border-color);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+
+  &:hover {
+    color: var(--accent) !important;
+    border-left-color: var(--accent);
+    background-color: var(--accent-light);
+  }
+
+  &.active {
+    color: var(--accent) !important;
+    border-left-color: var(--accent);
+    background-color: var(--accent-light);
+    font-weight: 500;
+  }
+}
+
 // ---- Bottom controls (search + dark mode) ----
 .sidebar-controls {
   display: flex;

@@ -136,10 +136,27 @@
 
   // ----- Close sidebar when nav link is clicked (mobile) -----
 
-  document.querySelectorAll('.sidebar-nav-link').forEach(function (link) {
+  document.querySelectorAll('.sidebar-nav-link, .nav-list-link').forEach(function (link) {
     link.addEventListener('click', function () {
       closeSidebar();
     });
+  });
+
+  // ----- Sidebar nav accordion (JTD pattern) -----
+  // Event delegation on document: walk up from clicked element to
+  // .nav-list-expander, then toggle .active on its parent <li>.
+  // This is the same approach used by Just the Docs.
+
+  document.addEventListener('click', function (e) {
+    var target = e.target;
+    while (target && !(target.classList && target.classList.contains('nav-list-expander'))) {
+      target = target.parentNode;
+      if (!target || target === document.body) return;
+    }
+    // Found a .nav-list-expander — toggle .active on its parent <li>
+    e.preventDefault();
+    var isActive = target.parentNode.classList.toggle('active');
+    target.setAttribute('aria-expanded', String(isActive));
   });
 
   // ----- Site Search -----

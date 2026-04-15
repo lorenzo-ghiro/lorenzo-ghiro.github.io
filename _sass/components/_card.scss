@@ -210,3 +210,31 @@
     .skill-fa { color: var(--accent); }
   }
 }
+
+// -----------------------------------------------------------------------
+// Tutorials grid
+// -----------------------------------------------------------------------
+.tutorials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: var(--space-5);
+  margin-top: var(--space-4);
+
+  .section-card {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+
+    .skill-chips { margin: var(--space-2) 0 var(--space-3); }
+
+    p {
+      flex: 1;
+      margin-bottom: var(--space-3);
+    }
+
+    > a.btn-pill {
+      align-self: flex-start;
+      margin-top: auto;
+    }
+  }
+}

@@ -40,7 +40,27 @@
   <nav class="sidebar-nav" aria-label="Main navigation">
     <a class="sidebar-nav-link{% if page.url == '/' %} active{% endif %}" href="{{ site.baseurl }}/">Home</a>
     {% for nav in site.nav_pages %}
+      {% if nav.collection %}
+        {% assign col_pages = site[nav.collection] | sort: "title" %}
+        {% assign col_active = false %}
+        {% if page.collection == nav.collection %}{% assign col_active = true %}{% endif %}
+        {% if page.url contains nav.name %}{% assign col_active = true %}{% endif %}
+    <li class="nav-list-item{% if col_active %} active{% endif %}">
+      <button class="nav-list-expander" aria-label="{{ nav.name | capitalize }} submenu" aria-expanded="{{ col_active }}">
+        <svg viewBox="0 0 24 24" aria-hidden="true" width="16" height="16"><path d="M9 18l6-6-6-6"/></svg>
+      </button>
+      <a class="nav-list-link{% if col_active and page.url contains nav.name and page.collection == nil %} active{% endif %}" href="{{ site.baseurl }}/{{ nav.name }}/">{{ nav.name | capitalize }}</a>
+      <ul class="nav-list">
+        {% for item in col_pages %}
+        <li class="nav-list-item">
+          <a class="nav-list-link{% if page.url == item.url %} active{% endif %}" href="{{ item.url | prepend: site.baseurl }}">{{ item.title }}</a>
+        </li>
+        {% endfor %}
+      </ul>
+    </li>
+      {% else %}
     <a class="sidebar-nav-link{% if page.url contains nav.name %} active{% endif %}" href="{{ site.baseurl }}/{{ nav.name }}/">{{ nav.name | capitalize }}</a>
+      {% endif %}
     {% endfor %}
   </nav>
 
