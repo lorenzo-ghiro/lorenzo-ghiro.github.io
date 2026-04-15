@@ -29,16 +29,14 @@ L. Ghiro, C. Pezzoni, M. Franceschini, R. Lo Cigno.<br>
 
 <div class="banner-frame" markdown="0" style="max-width: 800px;">
 <img src="{{ site.url }}{{ site.baseurl }}/images/plexe-mds.gif" alt="Vehicular platoon formation" loading="lazy">
-<div class="banner-caption">Vehicular platoon simulation with heterogeneous CACC controllers. OMNeT++/Plexe.</div>
+<div class="banner-caption">Platoon simulation (OMNeT++/Plexe). Without MDS (top), a cyberattack causes a collision. With our MDS active (bottom), the attack is detected and an emergency protocol restores safe inter-vehicle gaps.</div>
 </div>
 
 ### About me
 
-I am an Assistant Professor (RTD-a) at the [Department of Information Engineering](https://www.unibs.it/it/ateneo/organizzazione/dipartimenti/ingegneria-dellinformazione-dii), [University of Brescia](https://www.unibs.it/it), where I am part of the [ANS Lab](https://ans.unibs.it) led by Prof. Francesco Gringoli and Prof. Renato Lo Cigno.
+I am an Assistant Professor (RTD-a) at the [Department of Information Engineering](https://www.unibs.it/it/ateneo/organizzazione/dipartimenti/ingegneria-dellinformazione-dii), [University of Brescia](https://www.unibs.it/it), where I am part of the [ANS Lab](https://ans.unibs.it) directed by Prof. Francesco Gringoli and Prof. Renato Lo Cigno.
 
 I received my BSc (2014), MSc (2017, *cum laude*), and PhD (2021) in Computer Science from the University of Trento, advised by Prof. Renato Lo Cigno and Prof. Leonardo Maccari.
 My PhD thesis focused on *Centrality Routing and Blockchain Technologies in Distributed Networks*.
 From 2021 to 2023 I was a Postdoctoral Researcher between the University of Trento and the University of Brescia.
 In 2019–2020 I was a Visiting Scholar at [Northeastern University](https://www.northeastern.edu), Boston (USA), hosted by Prof. Stefano Basagni within the Institute for the Wireless Internet of Things.
-
-<!-- My scientific objective is to advance algorithmically grounded networking research while contributing to the educational and professional evolution of Computer Science, promoting competitive projects and supporting technology transfer. -->

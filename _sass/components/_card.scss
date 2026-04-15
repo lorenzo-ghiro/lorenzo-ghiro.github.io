@@ -82,3 +82,131 @@
     flex: none;
   }
 }
+
+// Responsive language skills table
+.lang-table {
+  td, th { padding: var(--space-2) var(--space-2) !important; }
+
+  @media (max-width: 560px) {
+    font-size: 0.8125rem;
+
+    th, td { padding: var(--space-1) var(--space-2) !important; }
+
+    // Abbreviate column headers via pseudo-content trick
+    .col-listening .full,
+    .col-reading .full,
+    .col-spoken .full,
+    .col-writing .full { display: none; }
+
+    .col-listening .abbr,
+    .col-reading .abbr,
+    .col-spoken .abbr,
+    .col-writing .abbr { display: inline; }
+  }
+
+  .col-listening .abbr,
+  .col-reading .abbr,
+  .col-spoken .abbr,
+  .col-writing .abbr { display: none; }
+}
+.student-table {
+  .col-degree { /* visible on desktop */ }
+
+  td, th { padding: var(--space-2) var(--space-2) !important; }
+
+  td:first-child { white-space: normal; }
+
+  @media (max-width: 700px) {
+    .col-degree { display: none; }
+
+    .col-year {
+      font-size: 0.75rem;
+      white-space: nowrap;
+    }
+  }
+}
+
+// Skills section
+.skills-section-label {
+  font-size: 0.75rem !important;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+  margin: 0 0 var(--space-3) 0;
+}
+
+.skill-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-bottom: var(--space-2);
+}
+
+.skill-chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.2rem var(--space-3);
+  background-color: var(--accent-light);
+  color: var(--accent);
+  border-radius: var(--radius-full);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.skill-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.skill-item {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3rem;
+  padding: var(--space-2) var(--space-3);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  background-color: var(--bg-primary);
+  color: var(--text-secondary) !important;
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-decoration: none !important;
+  background-image: none !important;
+  transition: border-color var(--transition-fast),
+              color var(--transition-fast),
+              background-color var(--transition-fast),
+              box-shadow var(--transition-fast);
+  min-width: 3.5rem;
+  text-align: center;
+  cursor: default;
+
+  &[href] { cursor: pointer; }
+
+  img {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+  }
+
+  .skill-fa {
+    font-size: 1.5rem;
+    line-height: 1;
+    color: var(--text-muted);
+    transition: color var(--transition-fast);
+    width: 28px;
+    text-align: center;
+  }
+
+  &[href]:hover {
+    border-color: var(--accent);
+    color: var(--accent) !important;
+    background-color: var(--accent-light);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+
+    .skill-fa { color: var(--accent); }
+  }
+}

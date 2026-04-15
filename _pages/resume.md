@@ -20,6 +20,76 @@ permalink: /resume/
 </div>
 
 <!-- ======================================================
+     Skills
+     ====================================================== -->
+<div class="section-card" markdown="0">
+<h3>Skills</h3>
+
+<h4 class="skills-section-label">Academic &amp; Research</h4>
+<div class="skill-chips">
+  <span class="skill-chip">Scientific writing</span>
+  <!-- <span class="skill-chip">Grant proposal writing</span> -->
+  <span class="skill-chip">University teaching (BSc/MSc)</span>
+  <span class="skill-chip">MSc/BSc thesis supervision</span>
+  <span class="skill-chip">TPC member (IEEE/ACM)</span>
+  <span class="skill-chip">Peer reviewer</span>
+  <span class="skill-chip">Conference presentations</span>
+  <span class="skill-chip">Network simulation &amp; emulation</span>
+   <span class="skill-chip">Vehicular networks</span>
+  <span class="skill-chip">Wireless PHY/MAC design</span>
+  <span class="skill-chip">Distributed algorithm design</span>
+</div>
+
+<h4 class="skills-section-label" style="margin-top:var(--space-5);">Tools &amp; Technologies</h4>
+<div class="skill-grid">
+  <a class="skill-item" href="https://git-scm.com" target="_blank" rel="noopener">
+    <img src="{{ site.baseurl }}/images/skills/git.png" alt="Git">
+    <span>Git</span>
+  </a>
+  <a class="skill-item" href="https://www.python.org" target="_blank" rel="noopener">
+    <img src="{{ site.baseurl }}/images/skills/python.png" alt="Python">
+    <span>Python</span>
+  </a>
+  <a class="skill-item" href="https://isocpp.org" target="_blank" rel="noopener">
+    <img src="{{ site.baseurl }}/images/skills/cpp.png" alt="C++">
+    <span>C++</span>
+  </a>
+  <a class="skill-item" href="https://eclipse.dev/sumo/" target="_blank" rel="noopener">
+    <img src="{{ site.baseurl }}/images/skills/sumo.png" alt="SUMO">
+    <span>SUMO</span>
+  </a>
+  <a class="skill-item" href="https://omnetpp.org" target="_blank" rel="noopener">
+    <img src="{{ site.baseurl }}/images/skills/omnetpp.png" alt="OMNeT++">
+    <span>OMNeT++</span>
+  </a>
+  <a class="skill-item" href="https://veins.car2x.org" target="_blank" rel="noopener">
+    <img src="{{ site.baseurl }}/images/skills/veins.png" alt="Veins">
+    <span>Veins</span>
+  </a>
+  <a class="skill-item" href="http://plexe.car2x.org" target="_blank" rel="noopener">
+    <img src="{{ site.baseurl }}/images/skills/plexe.png" alt="Plexe">
+    <span>Plexe</span>
+  </a>
+  <a class="skill-item" href="https://www.linux.org" target="_blank" rel="noopener">
+    <img src="{{ site.baseurl }}/images/skills/linux.png" alt="Linux">
+    <span>Linux</span>
+  </a>
+  <a class="skill-item" href="https://www.amd.com/en/products/adaptive-socs-and-fpgas.html" target="_blank" rel="noopener">
+    <img src="{{ site.baseurl }}/images/skills/fpga.png" alt="FPGA">
+    <span>FPGA</span>
+  </a>
+  <span class="skill-item">
+    <img src="{{ site.baseurl }}/images/skills/DES.png" alt="Discrete Event Simulation">
+    <span>DES Sim.</span>
+  </span>
+  <span class="skill-item">
+    <img src="{{ site.baseurl }}/images/skills/rdp.png" alt="Discrete Event Simulation">
+    <span>Remote Admin</span>
+  </span>
+</div>
+</div>
+
+<!-- ======================================================
      Education
      ====================================================== -->
 <div class="section-card" markdown="0">
@@ -216,24 +286,24 @@ permalink: /resume/
 <div class="section-card" markdown="0">
 <h3>Student Supervision</h3>
 <div style="overflow-x: auto; -webkit-overflow-scrolling: touch;">
-<table style="width:100%; border-collapse: collapse; min-width: 500px;">
+<table class="student-table" style="width:100%; border-collapse: collapse; min-width: 400px;">
 <thead>
 <tr style="border-bottom: 2px solid var(--border-color);">
   <th style="text-align:left; padding: var(--space-2) var(--space-3); font-size:0.8125rem; color:var(--text-muted); font-weight:600; text-transform:uppercase; letter-spacing:0.06em;">Student</th>
-  <th style="text-align:left; padding: var(--space-2) var(--space-3); font-size:0.8125rem; color:var(--text-muted); font-weight:600; text-transform:uppercase; letter-spacing:0.06em;">Degree</th>
-  <th style="text-align:left; padding: var(--space-2) var(--space-3); font-size:0.8125rem; color:var(--text-muted); font-weight:600; text-transform:uppercase; letter-spacing:0.06em;">Year</th>
+  <th class="col-degree" style="text-align:left; padding: var(--space-2) var(--space-3); font-size:0.8125rem; color:var(--text-muted); font-weight:600; text-transform:uppercase; letter-spacing:0.06em;">Degree</th>
+  <th class="col-year" style="text-align:left; padding: var(--space-2) var(--space-3); font-size:0.8125rem; color:var(--text-muted); font-weight:600; text-transform:uppercase; letter-spacing:0.06em;">Year</th>
   <th style="text-align:left; padding: var(--space-2) var(--space-3); font-size:0.8125rem; color:var(--text-muted); font-weight:600; text-transform:uppercase; letter-spacing:0.06em;">Thesis</th>
 </tr>
 </thead>
 <tbody>
 {% for student in site.data.students %}
 <tr style="border-bottom: 1px solid var(--border-color);">
-  <td style="padding: var(--space-3); font-weight:500; white-space:nowrap;">{{ student.name }}</td>
-  <td style="padding: var(--space-3); color:var(--text-secondary); white-space:nowrap;">{{ student.degree }}</td>
-  <td style="padding: var(--space-3); color:var(--text-muted); white-space:nowrap;">{{ student.year }}</td>
+  <td style="padding: var(--space-3); font-weight:500;">{{ student.name }}</td>
+  <td class="col-degree" style="padding: var(--space-3); color:var(--text-secondary); white-space:nowrap;">{{ student.degree }}</td>
+  <td class="col-year" style="padding: var(--space-3); color:var(--text-muted); white-space:nowrap;">{{ student.year }}</td>
   <td style="padding: var(--space-3); color:var(--text-secondary); font-size:0.875rem;">
     {% if student.file and student.file != "" %}
-    <a href="{{ site.url }}{{ site.baseurl }}/thesis/{{ student.file }}" target="_blank" rel="noopener">{{ student.title }}</a>
+    <a href="{{ site.baseurl }}/thesis/{{ student.file }}" target="_blank" rel="noopener">{{ student.title }}</a>
     {% else %}
     {{ student.title }}
     {% endif %}
@@ -275,34 +345,34 @@ permalink: /resume/
 <div class="section-card" markdown="0">
 <h3>Language Skills</h3>
 <div style="overflow-x: auto; -webkit-overflow-scrolling: touch;">
-<table style="width:60%; border-collapse:collapse; font-size:0.875rem; min-width: 380px;">
+<table class="lang-table" style="width:60%; border-collapse:collapse; font-size:0.875rem; min-width: 300px;">
 <thead>
 <tr style="border-bottom: 2px solid var(--border-color);">
-  <th style="text-align:left; padding: var(--space-2) var(--space-3); color:var(--text-muted); font-weight:600; text-transform:uppercase; letter-spacing:0.06em;">Language</th>
-  <th style="text-align:center; padding: var(--space-2) var(--space-3); color:var(--text-muted); font-weight:600; text-transform:uppercase; letter-spacing:0.06em;">Listening</th>
-  <th style="text-align:center; padding: var(--space-2) var(--space-3); color:var(--text-muted); font-weight:600; text-transform:uppercase; letter-spacing:0.06em;">Reading</th>
-  <th style="text-align:center; padding: var(--space-2) var(--space-3); color:var(--text-muted); font-weight:600; text-transform:uppercase; letter-spacing:0.06em;">Spoken</th>
-  <th style="text-align:center; padding: var(--space-2) var(--space-3); color:var(--text-muted); font-weight:600; text-transform:uppercase; letter-spacing:0.06em;">Writing</th>
+  <th style="text-align:left; color:var(--text-muted); font-weight:600; text-transform:uppercase; letter-spacing:0.06em;">Language</th>
+  <th class="col-listening" style="text-align:center; color:var(--text-muted); font-weight:600; text-transform:uppercase; letter-spacing:0.06em;"><span class="full">Listening</span><span class="abbr">List.</span></th>
+  <th class="col-reading" style="text-align:center; color:var(--text-muted); font-weight:600; text-transform:uppercase; letter-spacing:0.06em;"><span class="full">Reading</span><span class="abbr">Read.</span></th>
+  <th class="col-spoken" style="text-align:center; color:var(--text-muted); font-weight:600; text-transform:uppercase; letter-spacing:0.06em;"><span class="full">Spoken</span><span class="abbr">Spok.</span></th>
+  <th class="col-writing" style="text-align:center; color:var(--text-muted); font-weight:600; text-transform:uppercase; letter-spacing:0.06em;"><span class="full">Writing</span><span class="abbr">Writ.</span></th>
 </tr>
 </thead>
 <tbody>
 <tr style="border-bottom: 1px solid var(--border-color);">
-  <td style="padding: var(--space-3); font-weight:500;">Italian 🇮🇹</td>
-  <td style="text-align:center; padding: var(--space-3);" colspan="4">Mother tongue</td>
+  <td style="font-weight:500;">Italian 🇮🇹</td>
+  <td style="text-align:center;" colspan="4">Mother tongue</td>
 </tr>
 <tr style="border-bottom: 1px solid var(--border-color);">
-  <td style="padding: var(--space-3); font-weight:500;">English 🇬🇧 🇺🇲</td>
-  <td style="text-align:center; padding: var(--space-3);">C1</td>
-  <td style="text-align:center; padding: var(--space-3);">C1</td>
-  <td style="text-align:center; padding: var(--space-3);">C1</td>
-  <td style="text-align:center; padding: var(--space-3);">C1</td>
+  <td style="font-weight:500;">English 🇬🇧 🇺🇲</td>
+  <td style="text-align:center;">C1</td>
+  <td style="text-align:center;">C1</td>
+  <td style="text-align:center;">C1</td>
+  <td style="text-align:center;">C1</td>
 </tr>
 <tr>
-  <td style="padding: var(--space-3); font-weight:500;">German 🇩🇪</td>
-  <td style="text-align:center; padding: var(--space-3);">B1</td>
-  <td style="text-align:center; padding: var(--space-3);">B2</td>
-  <td style="text-align:center; padding: var(--space-3);">B1</td>
-  <td style="text-align:center; padding: var(--space-3);">B2</td>
+  <td style="font-weight:500;">German 🇩🇪</td>
+  <td style="text-align:center;">B1</td>
+  <td style="text-align:center;">B2</td>
+  <td style="text-align:center;">B1</td>
+  <td style="text-align:center;">B2</td>
 </tr>
 </tbody>
 </table>
