@@ -39,7 +39,7 @@ analytics:
 # ============================================================
 # STEP 4: Choose Your Pages (comment out any you don't need)
 # ============================================================
-show_news: false          # show news block on home page sidebar
+show_news: true          # show news block on home page sidebar
 nav_pages:
   - name: resume
   - name: publications

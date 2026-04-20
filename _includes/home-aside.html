@@ -5,7 +5,7 @@
 {% for article in site.data.news limit:3 %}
 <div class="news-item">
 <div class="news-date">{{ article.date }}</div>
-<div class="news-headline">{{ article.headline }}</div>
+				<div class="news-headline">{{ article.headline | markdownify | remove: '<p>' | remove: '</p>' }}</div>
 </div>
 {% endfor %}
 </div>

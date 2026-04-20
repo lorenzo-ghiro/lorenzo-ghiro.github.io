@@ -1,20 +1,12 @@
 # News items shown on the home page sidebar.
 # The 3 most recent are shown; all appear on /allnews.
 # Each entry needs: date, headline
-- date: 6 February, 1986
-  headline: "Appointed to the Rogers Commission investigating the Space Shuttle Challenger disaster"
 
-- date: 1 January, 1980
-  headline: "National Medal of Science awarded by President Carter"
+- date: 15 April 2026
+  headline: "Last article entitled [Physics Joins AI: A Real-Time Hybrid Misbehavior Detection Framework for Vehicular Networks](https://doi.org/10.1016/j.comcom.2026.108519) has been published on [Elsevier Computer Communications](https://www.sciencedirect.com/journal/computer-communications/vol/252/suppl/C)"
 
-- date: 21 October, 1965
-  headline: "Awarded the Nobel Prize in Physics for contributions to quantum electrodynamics"
+- date: March 13-14, 2026
+  headline: "Happy to have joined the 1st [UNITA-BE-SAFE In-Person Meeting](https://besafe-unita.github.io/besafe/activities/#1st-in-person-meeting--bra%C8%99ov-romania) in Brasov, hosted by the [Universitatea Transilvania Brașov](https://www.unitbv.ro)"
 
-- date: 1 September, 1961
-  headline: "The Feynman Lectures on Physics begins publication"
-
-- date: 1 June, 1959
-  headline: "Delivered 'There's Plenty of Room at the Bottom' talk at Caltech APS meeting"
-
-- date: 1 January, 1951
-  headline: "Joined the faculty at California Institute of Technology"
+- date: January 12-14, 2026
+  headline: "Participated to the [Italian Networking Workshop (INW)](https://inw.di.unito.it)"
