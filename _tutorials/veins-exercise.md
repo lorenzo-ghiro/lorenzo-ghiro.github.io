@@ -4,11 +4,13 @@ title: "Exercise with Veins"
 description: "Customize the Veins DEMO scenario to implement V2V multihop messaging with TTL-limited propagation, duplicate suppression, and parallel simulation studies."
 tags: [Veins, OMNeT++, SUMO, V2V, C++]
 permalink: /tutorials/veins-exercise/
+sommerveins: https://github.com/sommer/veins/tree/veins-5.3.1
+lgveinsdemo: https://github.com/lorenzo-ghiro/veins/tree/demoVNCD_veins5.3
 ---
 
 # {{ page.title }}
 
-The goal of this exercise is to customize the [Veins DEMO Scenario](https://veins.car2x.org/tutorial/#finish){:target="_blank"},
+The goal of this exercise is to customize the [Veins DEMO Scenario](https://veins.car2x.org/tutorial/#finish),
 which is well described in the [Veins Tutorial by P. B. Stahorszki]({{ site.url }}{{ site.baseurl }}/assets/res/VEINS_tutorial_PBStahorszki.pdf){:target="_blank"}
 
 Essentially, we just want the cars to communicate to each other, without the need of any Road Side Unit (RSU).
@@ -31,8 +33,8 @@ to track what each car is doing.
 </routes>
 ```
 
-Then, similarly to what is done in the [SUMO authobahn tutorial](https://sumo.dlr.de/docs/Tutorials/Autobahn.html#run_the_simulation){:target="_blank"},
-define the GUI settings for SUMO, save them in a file called [*guisettings.xml*](https://tests.ing.unibs.it/ghiro/veins/-/blob/demoVNCD/examples/veins/guisettings.xml?ref_type=heads){:target="_blank"} and instruct
+Then, similarly to what is done in the [SUMO authobahn tutorial](https://sumo.dlr.de/docs/Tutorials/Autobahn.html#run_the_simulation),
+define the GUI settings for SUMO, save them in a file called [*guisettings.xml*]({{ page.lgveinsdemo }}/examples/veins/guisettings.xml) and instruct
 [Veins-launchd](https://veins.car2x.org/documentation/sumo-launchd/)
 to use them when running the simulation.
 
@@ -59,8 +61,8 @@ to use them when running the simulation.
 Let's get rid of the RSU, as we want the communication to happen only among vehicles (V2V), but not towards any infrastructure (V2X).
 This is an easy step. 
 
-- Define a new scenario identical to the original [RSUExampleScenario](https://github.com/sommer/veins/blob/veins-5.2/examples/veins/RSUExampleScenario.ned){:target="_blank"}
-but remove the RSU declared internally as a submodule. Let's call this file **demoVNCDScenario.ned** and let the network inside be called, again, *DemoVNCDScenario*
+- Define a new scenario identical to the original [RSUExampleScenario]({{ page.sommerveins }}/examples/veins/RSUExampleScenario.ned)
+but remove the RSU declared internally as a submodule. Let's call this file [**demoVNCDScenario.ned**]({{ page.lgveinsdemo }}/examples/veins/demoVNCDScenario.ned) and let the network inside be called, again, *DemoVNCDScenario*
 
 **demoVNCDScenario.ned**
 ```c
@@ -76,7 +78,7 @@ network demoVNCDScenario extends Scenario
 
 - Update the omnetpp.ini. You must change the network name and you can delete all the RSU configuration details
 
-**omnetpp.ini**
+[**omnetpp.ini**]({{ page.lgveinsdemo }}/examples/veins/omnetpp.ini)
 
 ~~network = RSUExampleScenario~~
 ```ini
@@ -120,19 +122,19 @@ Delete also these lines as we don't want to handle anymore the channelSwitching 
 
 ## 3. Meet TraCI in Veins
 
-Now (in theory) our simulation works exactly as in the original [Veins DEMO Scenario](https://veins.car2x.org/tutorial/#finish){:target="_blank"}, just without the assistance of the RSU repeating the received messages with a 2 second delay for those vehicles that approach later the location of the accident.
+Now (in theory) our simulation works exactly as in the original [Veins DEMO Scenario](https://veins.car2x.org/tutorial/#finish), just without the assistance of the RSU repeating the received messages with a 2 second delay for those vehicles that approach later the location of the accident.
 
-Unfortunately, in [TraCIDemo11p.cc](https://github.com/sommer/veins/blob/veins-5.2/src/veins/modules/application/traci/TraCIDemo11p.cc){:target="_blank"}
+Unfortunately, in [TraCIDemo11p.cc]({{ page.sommerveins }}/src/veins/modules/application/traci/TraCIDemo11p.cc)
 the car color feature  ---cars with accident turning red, while cars that received at least one Wave Short Message turn green---
 is implemented only for the Omnet GUI, but not for the SUMO GUI.
 Let's start learning how to interact with SUMO via the VEINS traci interface by turning to RED the cars that suffer an accident.
 
 BTW, Did you understand already how accidents are "forced to happen" in the simulation? It's through the use of the *startAccidentMsg*
-inside [TraCIMobility.cc](https://github.com/sommer/veins/blob/veins-5.2/src/veins/modules/mobility/traci/TraCIMobility.cc#L135-L150){:target="_blank"}
+inside [TraCIMobility.cc]({{ page.sommerveins }}/src/veins/modules/mobility/traci/TraCIMobility.cc#L135-L150)
 Let's add there some code to change the vehicle color.
 
 1. We will need first to get the *vehicle command interface*
-([there is a standard method to do this](https://github.com/sommer/veins/blob/c96edc2be25266300f73bd701ee33f4acb662631/src/veins/modules/mobility/traci/TraCIMobility.h#L151-L155){:target="_blank"})
+([there is a standard method to do this](https://github.com/sommer/veins/blob/veins-5.3.1/src/veins/modules/mobility/traci/TraCIMobility.h#L151-L155))
 
 2. Then the vehicle command interface supports the method `setColor(TraCIColor(red,green,blue,alpha))`
 
@@ -186,7 +188,7 @@ packet TraCIDemo11pMessage extends BaseFrame1609_4 {
 
 Define parameters to control the application logic. Indeed, if later we want to set up a parameter study,
 we wish to be able to conveniently define TTL values from the omnetpp.ini file. Similarly, we wish
-to toggle on/off the ability of avoiding duplicates. So introduce 2 parameters in the [TraCIDemo11p.ned](https://github.com/sommer/veins/blob/veins-5.2/src/veins/modules/application/traci/TraCIDemo11p.ned){:target="_blank"}
+to toggle on/off the ability of avoiding duplicates. So introduce 2 parameters in the [TraCIDemo11p.ned]({{ page.sommerveins }}/src/veins/modules/application/traci/TraCIDemo11p.ned)
 file to be able to customize the Application behavior.
 
 ```c++
@@ -205,7 +207,7 @@ simple TraCIDemo11p extends DemoBaseApplLayer
 To implement the *"duplicates avoidance strategy"* we need to keep in memory the
 [set](https://en.cppreference.com/w/cpp/container/set){:target="_blank"} of already seen messages.
 We also need to know, inside the application code, what is the TTL number configured by the user in the omnetpp.ini.
-Introduce the set of received messages, a TTL variable and "avoidDuplicates" flag in [TraCIDemo11p.h](https://github.com/sommer/veins/blob/veins-5.2/src/veins/modules/application/traci/TraCIDemo11p.h){:target="_blank"}
+Introduce the set of received messages, a TTL variable and "avoidDuplicates" flag in [TraCIDemo11p.h]({{ page.sommerveins }}/src/veins/modules/application/traci/TraCIDemo11p.h)
 
 **TraCIDemo11p.h**
 ```c++
@@ -260,7 +262,7 @@ void TraCIDemo11p::handlePositionUpdate(cObject* obj)
 }
 ```
 
-[SOLUTION](https://tests.ing.unibs.it/ghiro/veins/-/commit/76b2fa165cab2708b5581b73d3afffce304c9278){:target="_blank"}
+[SOLUTION](https://github.com/lorenzo-ghiro/veins/commit/ebbb8afa7bcf7b28f46b3ac7d513b789eac8b012)
 
 In the proposed solution the code of `TraCIDemo11p.c` has been polished, removing the code related
 to `beacons` and `channelSwitching` modes.
@@ -305,14 +307,14 @@ all the iteration variable values we want to track (`${resultdir}/${configname}_
 - we defined also `NoGui` configurations where we disable the support for GUIs, these are configurations suitable
 for batch executions in parallel.
 
-Now take a look to the [veins scripts](https://github.com/veins/veins_scripts){:target="_blank"}, which are a collection
-of tools that help a researcher in defining simulation batches to be run in parallel thanks to [runmaker](https://github.com/veins/runmaker){:target="_blank"}. We take advantage of these tools to:
+Now take a look to the [veins scripts](https://github.com/veins/veins_scripts), which are a collection
+of tools that help a researcher in defining simulation batches to be run in parallel thanks to [runmaker](https://github.com/veins/runmaker). We take advantage of these tools to:
 
 1. Define a list of all the simulations we want to run;
 2. Run this list of simulations in parallel.
 
 To accomplish our first goal we rely on
-[generateRunsFile.pl](https://github.com/veins/veins_scripts#generaterunsfilepl){:target="_blank"}
+[generateRunsFile.pl](https://github.com/veins/veins_scripts#generaterunsfilepl)
 
 ```console
 ~/src/veins/examples/veins$  generateRunsFile.pl | grep NoGui
@@ -329,20 +331,20 @@ To accomplish our first goal we rely on
 ```
 The script is able to list all possible runs for all configurations listed in the `omnetpp.ini` file, and with `grep` we filter and keep only those that contain the `NoGui` keyword.
 The output of `generateRunsFile.pl` is formatted to be compliant with
-[runmaker.py](https://github.com/veins/runmaker/blob/master/runmaker4.py){:target="_blank"}, so let's save
-the output of `generateRunsFile.pl` in text file that we call `runs.txt`
+[runmaker.py](https://github.com/veins/runmaker/blob/master/runmaker4.py), so let's save
+the output of `generateRunsFile.pl` in text file that we call `runs`
 
 ```console
-generateRunsFile.pl | grep NoGui > runs.txt
+generateRunsFile.pl | grep NoGui > runs
 ```
 
 We now just need to let runmaker do the job it is designed for, i.e., spawn in parallel a process for each
-simulation listed in some input file (`runs.txt` in the present case).
-Before doing so, don't forget to run the [veins_launchd daemon](https://veins.car2x.org/documentation/sumo-launchd){:target="_blank"}.
+simulation listed in some input file (`runs` in the present case).
+Before doing so, don't forget to run the [veins_launchd daemon](https://veins.car2x.org/documentation/sumo-launchd).
 
 ```console
 veins_launchd -vv -c sumo -d
-runmaker4.py -j $(nproc) runs.txt
+runmaker4.py -j $(nproc) runs
 ```
 
 Once the simulations will be completed, check if there are new files in your results folder:
@@ -390,7 +392,7 @@ scalar demoVNCDScenario.node[4].appl generatedWSAs 0
 
 Seems like the `*.sca` files contain the count of how many WSM, BSM and WSA messages have been generated by each car, bingo!
 If you are interested in understanding how this stats have been recorded, then check
-[DemoBaseApplLayer](https://github.com/sommer/veins/blob/veins-5.2/src/veins/modules/application/ieee80211p/DemoBaseApplLayer.cc#L254),
+[DemoBaseApplLayer]({{ page.sommerveins }}/src/veins/modules/application/ieee80211p/DemoBaseApplLayer.cc#L254),
 which is the parent class of the application run by our cars (`TraCIDemo11p`).
 
 Unfortunately, the format of scalar and vector files is a bit cumbersome, and cannot be read directly
