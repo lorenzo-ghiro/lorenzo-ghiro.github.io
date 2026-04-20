@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: toclay
 title: "Exercise with Veins"
 description: "Customize the Veins DEMO scenario to implement V2V multihop messaging with TTL-limited propagation, duplicate suppression, and parallel simulation studies."
 tags: [Veins, OMNeT++, SUMO, V2V, C++]
@@ -17,9 +17,6 @@ defined through a **Time To Live (TTL)** field. Moreover, we want cars to propag
 which means we want to implement a mechanism to **avoid duplicates**.
 Finally, we want to see how much the implemented strategies influence the amount of generated traffic.
 Let's start!
-
-- 
-{:toc}
 
 ## 1. Update SUMO Configuration
 

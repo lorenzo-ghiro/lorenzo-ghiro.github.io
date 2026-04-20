@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: toclay
 title: "Getting Started with Plexe"
 description: "Command vehicles in a platoon, use inter-vehicle communication, and implement a leave-platoon maneuver in OMNeT++/Plexe."
 tags: [Plexe, OMNeT++, SUMO, CACC, C++]
@@ -24,17 +24,6 @@ Solving this guided exercise you will learn:
 - How to use inter-vehicle communication in Plexe.
 
 ![Demo of the Getting Started Exercise]({{ site.url }}{{ site.baseurl }}/assets/res/gettingStartedPlexe.gif){: width="800" }
-
-<details open markdown="block">
-  <summary>
-    Table of contents
-  </summary>
-  {: .text-delta }
-1. TOC
-{:toc}
-</details>
-
-
 
 ## Exercise outline
 

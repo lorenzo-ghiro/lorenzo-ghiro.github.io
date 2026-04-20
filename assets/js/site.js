@@ -159,6 +159,64 @@
     target.setAttribute('aria-expanded', String(isActive));
   });
 
+  // ----- Right-side page TOC -----
+
+  function slugifyHeading(text) {
+    return text
+      .toLowerCase()
+      .replace(/[^a-z0-9\s-]/g, '')
+      .trim()
+      .replace(/\s+/g, '-')
+      .replace(/-+/g, '-');
+  }
+
+  function buildRightToc() {
+    var pageContent = document.getElementById('tocPageContent');
+    var tocNav = document.getElementById('pageTocNav');
+    var tocCard = document.getElementById('pageTocCard');
+    if (!pageContent || !tocNav || !tocCard) return;
+
+    var headings = Array.prototype.slice.call(
+      pageContent.querySelectorAll('h2, h3')
+    ).filter(function (h) {
+      return !h.classList.contains('no_toc');
+    });
+
+    if (headings.length === 0) {
+      tocCard.style.display = 'none';
+      return;
+    }
+
+    var ids = {};
+    var list = document.createElement('ul');
+
+    headings.forEach(function (heading) {
+      var text = heading.textContent.trim();
+      if (!text) return;
+
+      if (!heading.id) {
+        var base = slugifyHeading(text) || 'section';
+        var nextCount = (ids[base] || 0) + 1;
+        ids[base] = nextCount;
+        heading.id = nextCount === 1 ? base : base + '-' + nextCount;
+      }
+
+      var li = document.createElement('li');
+      li.className = heading.tagName === 'H3' ? 'toc-l3' : 'toc-l2';
+
+      var a = document.createElement('a');
+      a.href = '#' + heading.id;
+      a.textContent = text;
+      li.appendChild(a);
+      list.appendChild(li);
+    });
+
+    tocNav.innerHTML = '';
+    tocNav.appendChild(list);
+  }
+
+  buildRightToc();
+
   // ----- Site Search -----
 
   var searchToggleBtn = document.getElementById('searchToggle');
