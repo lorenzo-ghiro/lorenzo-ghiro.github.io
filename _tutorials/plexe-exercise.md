@@ -177,7 +177,7 @@ We concluded the last step by asking to the car that is abandoning the platoon t
 By issuing ```setCACCConstantSpacing(15.0)``` our car will start braking, and only after some *actuation time* the car will really be 15m away from the platoon.
 How do we understand that this necessary *actuation time* has passed and that we have reached the desired safety-distance?
 
-The solution is to keep checking our distance from the vehicle in front of us relying on ```getRadarMeasurements()```, one further function offered by the Plexe [API]({{ page.plexewebsite }}/api){:target="_blank"}. Notice that, as last operation of the solution to [Step 1]({{ 'plexe_exercise.html#step-1-scenario-customization' | relative_url }}), we started planning an operation of "distance-checking" by scheduling a self-message called `checkDistance`.
+The solution is to keep checking our distance from the vehicle in front of us relying on ```getRadarMeasurements()```, one further function offered by the Plexe [API]({{ page.plexewebsite }}/api){:target="_blank"}. Notice that, as last operation of the solution to [Step 1]({{ '#step-1-scenario-customization' }}), we started planning an operation of "distance-checking" by scheduling a self-message called `checkDistance`.
 
 #### **Step 2 - Hint**
 {: .no_toc }
