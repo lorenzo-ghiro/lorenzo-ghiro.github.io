@@ -164,7 +164,7 @@ Check out the [*Utilities documentation*]({{ page.plexewebsite }}/documentation/
 
 - When the *startBraking* event is intercepted by the `handleMessagge()` implemented by `SimpleScenario.cc`, we do 3 operations:
     1. We Increase the CACC Constant Spacing (from 5m we set it to 15m) with `setCACCConstantSpacing()`, which
-     is one of the many functions documented in the Plexe [API](/api){:target="_blank"}.
+     is one of the many functions documented in the Plexe [API]({{ page.plexewebsite }}/api){:target="_blank"}.
     2. We change the Car color through TraCI, i.e., the [SUMO Traffic Control Interface](https://sumo.dlr.de/docs/TraCI.html){:target="_blank"} with `traciVehicle->setColor(...);`.
     The `traciVehicle` is a further submodule of each Platoon Car object, exposing most of the functionalities defined by the SUMO TraCI interface.
     3. We schedule, in just 0.1s from the current simulation time, a check of the distance from the front vehicle.
