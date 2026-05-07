@@ -19,6 +19,16 @@ permalink: /
 
 {% include research-interests.html %}
 
+<div class="callout callout-info" markdown="0">
+<div class="callout-title"><i class="fa-solid fa-file-lines callout-icon"></i> Coming soon at: IEEE VNC 2026</div>
+<p><strong>A MEC-Based Optimization Framework for Dynamic Inductive Charging</strong><br>
+E. Akiskaloglu, M. Atmaca, L. Ghiro, G. Perin and R. Lo Cigno.<br>
+<em>IEEE VNC 2026</em>&nbsp;
+<a href="https://arxiv.org/abs/2604.28069" target="_blank" rel="noopener">preprint arxiv</a>&nbsp;
+&nbsp;<a href="https://github.com/lorenzo-ghiro/sumo-wireless-charging" target="_blank" rel="noopener">Github</a>
+</p>
+</div>
+
 
 <div class="callout callout-info" markdown="0">
 <div class="callout-title"><i class="fa-solid fa-file-lines callout-icon"></i> Latest Publication — Elsevier Computer Communications, 2026</div>
