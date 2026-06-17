@@ -401,15 +401,18 @@ Edit `_data/team_members.yml`:
 
 ### Step 8: Add News
 
-Edit `_data/news.yml` (newest first):
+Create one Markdown file per news item inside `_news/` (newest first by date):
 
-```yaml
-- date: 15 March, 2024
-  headline: "Our paper on X was accepted to NeurIPS!"
+```markdown
+---
+date_display: "15 March, 2024"   # optional, shown exactly as written
+headline: "Our paper on X was accepted to NeurIPS!"
+---
 
-- date: 1 January, 2024
-  headline: "Welcome to new PhD student Alice Johnson"
+Optional body text shown on /news/.
 ```
+
+Example filename: `2024-03-15-neurips-paper.md` (used for chronological ordering)
 
 ### Step 9: Customize Pages
 

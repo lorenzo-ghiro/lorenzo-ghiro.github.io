@@ -51,12 +51,15 @@ nav_pages:
   - name: teaching
   - name: tutorials
     collection: tutorials        # auto-populates accordion from _tutorials/
+  - name: news
   # - name: blogs
 
 # ============================================================
 # Advanced Settings (you probably don't need to change these)
 # ============================================================
 collections:
+  news:
+    output: false
   tutorials:
     output: true
     permalink: /tutorials/:name/

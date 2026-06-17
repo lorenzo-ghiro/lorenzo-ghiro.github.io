@@ -1,0 +1,9 @@
+{% assign expanded = include.show_body == true or include.show_body == "true" %}
+{% assign news_body = include.news.body | default: include.news.content %}
+<div class="news-item{% if expanded %} news-item-full{% endif %}">
+  <div class="news-date">{% if include.news.date_display %}{{ include.news.date_display }}{% else %}{{ include.news.date | date: "%d %B %Y" }}{% endif %}</div>
+  <div class="news-headline">{{ include.news.headline | markdownify | remove: '<p>' | remove: '</p>' }}</div>
+  {% if expanded and news_body != "" %}
+  <div class="news-body">{{ news_body | markdownify }}</div>
+  {% endif %}
+</div>

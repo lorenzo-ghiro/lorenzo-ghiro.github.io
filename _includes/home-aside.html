@@ -2,13 +2,11 @@
 <div class="section-card" style="margin-top: var(--space-6);">
 <h4 style="margin-top: 0;">News</h4>
 <div class="news-timeline">
-{% for article in site.data.news limit:3 %}
-<div class="news-item">
-<div class="news-date">{{ article.date }}</div>
-				<div class="news-headline">{{ article.headline | markdownify | remove: '<p>' | remove: '</p>' }}</div>
-</div>
+{% assign news_items = site.news | sort: 'path' | reverse %}
+{% for article in news_items limit:3 %}
+{% include news-item.html news=article %}
 {% endfor %}
 </div>
-<p style="margin-top: var(--space-4);"><a href="{{ site.url }}{{ site.baseurl }}/allnews.html">See all news &rarr;</a></p>
+<p style="margin-top: var(--space-4);"><a href="{{ site.url }}{{ site.baseurl }}/news/">See all news &rarr;</a></p>
 </div>
 {% endif %}

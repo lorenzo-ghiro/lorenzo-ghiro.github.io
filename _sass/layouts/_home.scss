@@ -115,4 +115,44 @@
     font-size: 0.875rem;
     line-height: 1.5;
   }
+
+  .news-item-full {
+    .news-body {
+      margin-top: var(--space-2);
+      color: var(--text-primary);
+      line-height: 1.65;
+
+      img {
+        width: 100%;
+        max-width: 640px;
+        height: auto;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .news-photo-grid {
+        margin-top: var(--space-2);
+
+        > p {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+          gap: var(--space-3);
+          margin: 0;
+        }
+
+        img {
+          margin: 0 auto;
+        }
+      }
+
+      p {
+        margin: 0 0 var(--space-2) 0;
+      }
+
+      p:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
 }
