@@ -20,7 +20,7 @@ permalink: /
 {% include research-interests.html %}
 
 <div class="callout callout-info" markdown="0">
-<div class="callout-title"><i class="fa-solid fa-file-lines callout-icon"></i> Coming soon at: IEEE VNC 2026</div>
+<div class="callout-title"><i class="fa-solid fa-file-lines callout-icon"></i>  IEEE VNC 2026, 8-10 June, Montreal, Canada</div>
 <p><strong>A MEC-Based Optimization Framework for Dynamic Inductive Charging</strong><br>
 E. Akiskaloglu, M. Atmaca, L. Ghiro, G. Perin and R. Lo Cigno.<br>
 <em>IEEE VNC 2026</em>&nbsp;
