@@ -323,6 +323,10 @@ permalink: /resume/
 <h3>Academic Service</h3>
 <div class="cv-entry">
   <div class="cv-period">2026</div>
+  <div class="cv-body"><strong>RTT Interview</strong> — DEI Department, GSD 09/IINF-03, University of Bologna</div>
+</div>
+<div class="cv-entry">
+  <div class="cv-period">2026</div>
   <div class="cv-body"><strong>Session Chair</strong> — IEEE Vehicular Networking Conference (VNC) 2026</div>
 </div>
 <div class="cv-entry">
