@@ -181,6 +181,13 @@ permalink: /resume/
 <div class="cv-entry">
   <div class="cv-period">2024 – 2025</div>
   <div class="cv-body">
+    <strong>BE-SAFE: Cyclist Safety in Smart Cities — A UNITA Consortium Research Project</strong> — <a href="https://besafe-unita.github.io/besafe/" target="_blank" rel="noopener">besafe-unita.github.io/besafe</a><br>
+    Building SUMO scenario for the evaluation of Cyclists Safety.
+  </div>
+</div>
+<div class="cv-entry">
+  <div class="cv-period">2024 – 2025</div>
+  <div class="cv-body">
     <strong>SCAR: a Privacy enHAnced SEcurity framework</strong> — <a href="https://ans.unibs.it/projects/scarphase" target="_blank" rel="noopener">ans.unibs.it</a><br>
     Research lead: distributed algorithms and AI-assisted mechanisms for misbehavior detection in vehicular platooning.
   </div>
@@ -322,8 +329,8 @@ permalink: /resume/
 <div class="section-card" markdown="0">
 <h3>Academic Service</h3>
 <div class="cv-entry">
-  <div class="cv-period">2026</div>
-  <div class="cv-body"><strong>RTT Interview</strong> — DEI Department, GSD 09/IINF-03, University of Bologna</div>
+  <div class="cv-period">2027</div>
+  <div class="cv-body"><strong>TPC Member</strong> — IEEE Vehicular Technology Conference (VTC) Spring 2027</div>
 </div>
 <div class="cv-entry">
   <div class="cv-period">2026</div>

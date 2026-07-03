@@ -1,9 +1,9 @@
 # ============================================================
 # STEP 1: Your Identity (required)
 # ============================================================
-name: "Lorenzo Ghiro"
-title: "Assistant Professor, PhD in Information and Communication Technology"
-institution: "University of Brescia, Italy"
+name: 'Lorenzo Ghiro'
+title: 'Assistant Professor, PhD in Information and Communication Technology'
+institution: 'University of Brescia, Italy<br><a href="https://www.cnit.it/en/">CNIT</a> - Consorzio Nazionale Interuniversitario per le Telecomunicazioni'
 email: lorenzo.ghiro@unibs.it
 photo: ghiro.png  # place your photo in images/
 
