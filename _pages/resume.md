@@ -157,6 +157,20 @@ permalink: /resume/
 </div>
 
 <!-- ======================================================
+     Industrial Funding
+     ====================================================== -->
+<div class="section-card" markdown="0">
+<h3>Industrial Funding</h3>
+<div class="cv-entry">
+  <div class="cv-body">
+    <strong>Development of Algorithms for the Automatic Detection of Traffic Events</strong><br>
+    Role: Principal Consultant &nbsp;·&nbsp; Budget Secured: €30,000<br>
+    Company: <a href="https://www.movyon.com" target="_blank" rel="noopener">Movyon</a>, controlled by Autostrade per l'Italia S.p.A.
+  </div>
+</div>
+</div>
+
+<!-- ======================================================
      Grants
      ====================================================== -->
 {% if site.data.grants %}

@@ -20,6 +20,12 @@ permalink: /
 {% include research-interests.html %}
 
 <div class="callout callout-info" markdown="0">
+<div class="callout-title"><i class="fa-solid fa-handshake callout-icon"></i> New Industrial Collaboration — Movyon</div>
+<p>Consultancy collaboration with <a href="https://www.movyon.com" target="_blank" rel="noopener">Movyon</a> on the project <strong>"Development of Algorithms for the Automatic Detection of Traffic Events"</strong>, securing €30,000 in funding as Principal Consultant.</p>
+</div>
+
+
+<div class="callout callout-info" markdown="0">
 <div class="callout-title"><i class="fa-solid fa-file-lines callout-icon"></i>  IEEE VNC 2026, 8-10 June, Montreal, Canada</div>
 <p><strong>A MEC-Based Optimization Framework for Dynamic Inductive Charging</strong><br>
 E. Akiskaloglu, M. Atmaca, L. Ghiro, G. Perin and R. Lo Cigno.<br>
